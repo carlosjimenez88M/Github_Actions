@@ -50,4 +50,4 @@ jobs:
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr script
-        run: python src/hola_mundo.py
+        run: python src/0.hola_mundo.py
