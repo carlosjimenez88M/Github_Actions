@@ -13,7 +13,7 @@ import os
 #==========================#
 
 def main():
-    name = os.get_env("USERNAME")
+    name = os.getenv("USERNAME")
     print(f'Hola {name} desde github!!')
 
 if __name__ == '__main__':
