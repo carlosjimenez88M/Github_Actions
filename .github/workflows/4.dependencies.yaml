@@ -1,0 +1,24 @@
+name: Python Workflow with Dependencies
+
+on: [push]
+
+jobs:
+  python_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Step 1 - Generate Output
+        run: |
+          python -c "with open('output.txt', 'w') as f: f.write('Hola desde Step 1!')"
+
+      - name: Step 2 - Read Output
+        run: |
+          python -c "with open('output.txt', 'r') as f: print('Step 2 read:', f.read())"
